@@ -1,1 +1,6 @@
 This is text file.
+<<<<<<< Updated upstream
+=======
+File edited in feature branch.
+Testing is in progress.
+>>>>>>> Stashed changes
