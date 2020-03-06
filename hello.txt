@@ -1,3 +1,0 @@
-This is text file.
-File edited in feature branch.
-Testing is in progress.
