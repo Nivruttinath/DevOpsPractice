@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: myapp-replicaset
-    labels: 
+  labels: 
       app: myapp 
       type: front-end
 spec:
@@ -18,8 +18,8 @@ spec:
            - name: nginx-container
              image: nginx
 
-    replicas: 3
+    replicas: 6
     
     selector:
-       matchLables:
-           type: front-end
+       matchLabels:
+           app: myapp
