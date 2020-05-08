@@ -1,0 +1,483 @@
+    1  kubectl 
+    2  kubectl get pods
+    3  kubectl get namespace
+    4  kubectl get pods
+    5  kubectl version
+    6  kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+    7  kubectl get pods
+    8  kubectl expose deployment hello-minikube --type=NodePort --port=8080
+    9  kubectl service hello-minikube --url
+   10  minikube service hello-minikube --url
+   11  kubectl get services
+   12  ifconfig 
+   13  10.99.121.68
+   14  kubectl delete services hello-minikube
+   15  ifconfig 
+   16  kubectl get services
+   17  kubectl get pods
+   18  kubectl delete deployment hello-minikube
+   19  kubectl get pods
+   20  kubeadm version
+   21  hostname
+   22  free -m
+   23  kubectl get nodes
+   24  ifconfig 
+   25  cat /etc/network/interfaces
+   26  kubectl get nodes
+   27  ssh kslave1
+   28  ifconfig 
+   29  ssh kslave2
+   30  ssh kslave1
+   31  apt-mark apt
+   32  apt-mark --hemp
+   33  apt-mark --help
+   34  kubectl get pods --all-namespaces
+   35  kubectl get nodes
+   36  kubectl get services
+   37  ssh kslave2
+   38  kubectl get nodes
+   39  kubectl run nginx --image=nginx
+   40  kubectl get pods
+   41  kubectl get pods -o wide
+   42  kubectl get pods
+   43  kubectl get nodes
+   44  kubectl describe pods
+   45  kubectl get nodes
+   46  kubectl get pods
+   47  kubectl delete pods nginx-7bb7cd8db5-hlwmm
+   48  kubectl get pods
+   49  kubectl get pods -o wide
+   50  kubectl delete nginx
+   51  kubectl get all
+   52  kubectl get replaset
+   53  kubectl get replicaset
+   54  kubectl delete  replicaset nginx-7bb7cd8db5
+   55  kubectl get all
+   56  kubectl delete  replicaset nginx-7bb7cd8db5
+   57  kubectl get replicaset
+   58  kubectl get pods
+   59  kubectl get pods -o wide
+   60  kubectl delete replicaset nginx-7bb7cd8db5
+   61  kubectl get pods -o wide
+   62  kubectl get all
+   63  kubectl delete deployment deployment.apps/nginx
+   64  kubectl delete deployment deployment.apps
+   65  kubectl delete deployment 
+   66  kubectl delete deployment --all
+   67  kubectl get all
+   68  kubectl get pods
+   69  kubectl get nodes
+   70  ls
+   71  cd Desktop/
+   72  ls
+   73  mkdir niv
+   74  cd niv/
+   75  ls
+   76  vi pod-definition.yml
+   77  ls
+   78  vi rc-definition.yml
+   79  kubectl get pods
+   80  kubectl get nodes
+   81  kubectl get all
+   82  kubectl create -f rc-definition.yml 
+   83  cat rc-definition.yml 
+   84  vi rc-definition.yml 
+   85  kubectl create -f rc-definition.yml 
+   86  kubectl get replicationcontroller
+   87  cat rc-definition.yml 
+   88  kubectl get all
+   89  kubectl delete replicationcontroller
+   90  kubectl get all
+   91  kubectl delete rc myapp-rc
+   92  kubectl get all
+   93  ssh kslave1
+   94  ssh kslave2
+   95  kubectl get pods
+   96  kubectl get nodes
+   97  cd ni
+   98  ls
+   99  cd Desktop/niv/
+  100  ls
+  101  cat pod-definition.yml 
+  102  kubectl get all
+  103  kubectl run nginx --image=nginx
+  104  kubectl get all
+  105  kubectl get pods
+  106  kubectl get pods -o wide
+  107  kubectl delete pod nginx-7bb7cd8db5-qfrhm
+  108  kubectl get pods -o wide
+  109  kubectl delete deployment nginx
+  110  kubectl get pods -o wide
+  111  kubectl get pods
+  112  kubectl get all
+  113  ls
+  114  kubectl create -f pod-definition.yml 
+  115  vi poooooooooood
+  116  vi pod-definition.yml 
+  117  kubectl create -f pod-definition.yml 
+  118  vi pod-definition.yml 
+  119  kubectl create -f pod-definition.yml 
+  120  kubectl get all
+  121  kubectl get pods -o wide
+  122  kubectl delete pod myapp-pod
+  123  kubectl get all
+  124  kubectl get pods
+  125  ls
+  126  cat rc-definition.yml 
+  127  kubectl get pods
+  128  kubectl get all
+  129  kubectl create -f rc-definition.yml 
+  130  kubectl get all
+  131  kubectl get pods
+  132  kubectl get all
+  133  kubectl get replicationcontroller
+  134  kubectl describe replicationcontroller
+  135  kubectl get pods
+  136  kubectl get pods -o wide
+  137  kubectl delete pods myapp-rc-qbhjq
+  138  kubectl get pods -o wide
+  139  kubectl get all
+  140  kubectl delete rc myapp-rc
+  141  kubectl get all
+  142  vi replicaset-definition.yml
+  143  kubectl create -f replicaset-definition.yml 
+  144  vi replicaset-definition.yml 
+  145  kubectl create -f replicaset-definition.yml 
+  146  vi replicaset-definition.yml 
+  147  kubectl create -f replicaset-definition.yml 
+  148  kubectl get all
+  149  kubectl get pds
+  150  kubectl get pods
+  151  kubectl describe replicaset
+  152  kubectl get pods -o wide
+  153  kubectl scale -replicas=4 -f replicaset-definition.yml 
+  154  kubectl scale --replicas=4 -f replicaset-definition.yml 
+  155  kubectl get all
+  156  kubectl get pods -o wide
+  157  kubectl scalte --replicas=3 -f replicaset-definition.yml 
+  158  kubectl scale --replicas=3 -f replicaset-definition.yml 
+  159  kubectl get pods -o wide
+  160  kubectl get all
+  161  kubectl get pods -o wide
+  162  vi replicaset-definition.yml 
+  163  kubectl get pods -o wide
+  164  kubectl replace -f replicaset-definition.yml 
+  165  kubectl get pods -o wide
+  166  kubectl get all
+  167  cat replicaset-definition.yml 
+  168  kubectl delete rc myapp-replicaset
+  169  kubectl delete replicaset myapp-replicaset
+  170  kubectl get all
+  171  cat replicaset-definition.yml 
+  172  ls
+  173  vi deployment-definition.yml
+  174  kubectl get all
+  175  kubectl create -f deployment-definition.yml 
+  176  cat deployment-definition.yml 
+  177  vi deployment-definition.yml 
+  178  kubectl create -f deployment-definition.yml 
+  179  kubectl get all
+  180  kubectl describe deployment
+  181  kubectl rollout status deployment
+  182  kubectl describe deployment
+  183  kubectl rollout status deployment/myapp-replicaset
+  184  cat deployment-definition.yml 
+  185  kubectl rollout status deployment/myapp-replicaset
+  186  kubectl rollout history deployment/myapp-replicaset
+  187  kubectl delete deployment
+  188  kubectl delete deployment/myapp-replicaset
+  189  kubectl get all
+  190  vi deployment-definition.yml 
+  191  kubectl create -f deployment-definition.yml --record
+  192  kubectl rollout status deployment/myapp-deployment
+  193  kubectl rollout history deployment/myapp-deployment
+  194  kubectl get all
+  195  kubectl get deployment
+  196  kubectl get replicaset
+  197  kubectl get all
+  198  kubectl get pods
+  199  kubectl get pods -o wide
+  200  kubectl rollout history deployment/myapp-deployment
+  201  vi deployment-definition.yml 
+  202  kubectl apply -f  deployment-definition.yml 
+  203  kubectl rollout status deployment/myapp-deployment
+  204  kubectl rollout history deployment/myapp-deployment
+  205  kubectl set image deployment/myapp-deployment nginx-container=nginx1.12-perl
+  206  kubectl rollout status deployment/myapp-deployment
+  207  kubectl rollout history deployment/myapp-deployment
+  208  kubectl get pods
+  209  kubectl rollout undo deployment/myapp-deployment
+  210  kubectl rollout status deployment/myapp-deployment
+  211  kubectl rollout history deployment/myapp-deployment
+  212  kubectl get pods
+  213  kubectl get all
+  214  kubectl describe deployment
+  215  ls
+  216  vi service-definition.yml
+  217  kubectl get pods -o wide
+  218  ifconfig 
+  219  kubectl create -f service-definition.yml 
+  220  vi service-definition.yml 
+  221  kubectl create -f service-definition.yml 
+  222  vi service-definition.yml 
+  223  kubectl create -f service-definition.yml 
+  224  kubectl get all
+  225  curl 10.98.155.46:30008
+  226  kubectl get pods -o wide
+  227  curl -v 10.244.2.21:80
+  228  curl -v 10.98.155.46:30008
+  229  ifconfig 
+  230  curl -v 172.31.19.188:30008
+  231  curl -v 127.0.0.1:30008
+  232  curl -v 172.17.0.1:30008
+  233  ifconfig 
+  234  curl -v 10.244.0.0:30008
+  235  kubectl get all
+  236  kubectl get services
+  237  curl -v 10.98.155.46:30008
+  238  curl -v 10.98.155.46:80
+  239  kubectl get services
+  240  kubectl delete services myapp-service
+  241  kubectl get services
+  242  kubectl get all
+  243  kubectl delete deployment deployment.apps/myapp-deployment
+  244  kubectl delete deployment deployment/myapp-deployment
+  245  kubectl delete deployment/myapp-deployment
+  246  kubectl get all
+  247  kubectl get pods -o wide
+  248  ls
+  249  cd de
+  250  ls
+  251  cd Desktop/
+  252  ls
+  253  vi niv/Kubernetes_Output.txt 
+  254  ssh kslave2
+  255  ls
+  256  cd Desktop/niv/
+  257  ls
+  258  vi docker_practice.txt
+  259  kubectl get nodes
+  260  kubectl get pods -o wide
+  261  kubectl get pods -n kube-system
+  262  cat /etc/hosts
+  263  hostname -i
+  264  cat /etc/hosts
+  265  hostname -i
+  266  ping kslave1
+  267  ping kslave2
+  268  cat /etc/os-release 
+  269  ssh kslave1
+  270  ssh kslave2
+  271  ssh kslave1
+  272  ssh kslave2
+  273  kubectl get namespaces
+  274  cat /etc/selinux/semanage.conf 
+  275  docker ps
+  276  docker version
+  277  ssh kslave2
+  278  curl -v 10.98.155.46:80
+  279  curl kslave2:8080
+  280  ssh kslave2
+  281  curl kslace2:8080
+  282  curl kslave2:8080
+  283  ssh kslave2
+  284  git version
+  285  ls
+  286  kubectl get nodes
+  287  kubectl get pods
+  288  kubectl get pods -n kube-systemmmmmmm
+  289  kubectl get pods -n kube-system
+  290  kubectl get noooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooodes
+  291  kubectl get nodes
+  292  sudo su - 
+  293  ls -al
+  294  cat .kube/admin.conf 
+  295  ls
+  296  ls -al
+  297  cat .profile 
+  298  ls -al
+  299  cd .kube/
+  300  lsssssss
+  301  ls
+  302  less admin.conf 
+  303  cat admin.conf 
+  304  cat admin.conf  | less
+  305  cd ..
+  306  ls
+  307  cd .config/
+  308  ls
+  309  cd ..
+  310  ls ---------------al
+  311  cd ..
+  312  cd -
+  313  ls
+  314  ls -al
+  315  kubectl get pods
+  316  kubectl get nodes
+  317  ls
+  318  mkdir nivruttinath
+  319  cd nivruttinath/
+  320  ls
+  321  git clone https://www.mozilla.org/en-US/firefox/welcome/2/
+  322  git clone https://github.com/Nivruttinath/DevOpsPractice.git
+  323  ls
+  324  cd ..
+  325  ls
+  326  mkdir kubernetes070520
+  327  ls
+  328  cd kubernetes070520/
+  329  cp ../nivruttinath/DevOpsPractice/pod-definition.yml .
+  330  ls
+  331  ls -ltr
+  332  cat pod-definition.yml 
+  333  kubectl create -f pod-definition.yml 
+  334  kubectl get pods
+  335  kubectl get pods -o wide
+  336  vi pod1.yml
+  337  kubectl get pods -o wide
+  338  kubectl create -f pod1.yml 
+  339  kubectl get pods -o wide
+  340  cat pod-definition.yml 
+  341  kubectl get pods -o wide
+  342  kubectl describe pod apache
+  343  curl 10.244.1.32
+  344  kubectl describe pod apache
+  345  kubectl get pods -o wide
+  346  curl 10.244.1.32
+  347  kubectl create -f pod1.yml 
+  348  cat pod1.yml 
+  349  kubectl logs apache
+  350  curl 10.244.1.32
+  351  kubectl logs apache
+  352  history 
+  353  ls
+  354  kubectl get pdods
+  355  kubectl get pods
+  356  kubectl get pods -o wide
+  357  vi pod1.yml 
+  358  kubectl apply -f pod1.yml 
+  359  kubectl get pods 
+  360  kubectl get pods  -o wode
+  361  kubectl get pods  -o wide
+  362  kubectl delete pods --all
+  363  kubectl get pods  -o wide
+  364  kubectl get services
+  365  kubectl get svc
+  366  kubectl get pods
+  367  ls
+  368  vi pod1.yml 
+  369  kubectl create -f pod1.yml 
+  370  vi pod1.yml 
+  371  kubectl create -f pod1.yml 
+  372  kubectl get pods
+  373  kubectl get pods -o wide
+  374  kubectl delete pods --all
+  375  vi pod2.yml
+  376  mv pod2.yml services.yml
+  377  vi pod2.yml
+  378  cat pod2.yml 
+  379  cat services.yml 
+  380  kubectl create -f services.yml 
+  381  kubectl get pods
+  382  kubectl get services
+  383  kubectl create -f pod2.yml 
+  384  vi pod2.yml 
+  385  kubectl create -f pod2.yml 
+  386  kubectl get pods
+  387  kubectl get pods --show-labels
+  388  kubectl get services
+  389  kubectl get pods --show-labels
+  390  kubectl describe svc myservice
+  391  curl 10.106.117.86:8080
+  392  kubectl get pods --show-labels
+  393  kubectl get pods -o wide
+  394  kubectl describe svc myservice
+  395  kubectl get pods -o wide
+  396  curl 10.106.117.86:8080
+  397  kubectl get pods -o wide
+  398  kubectl exec -it apache1 bash
+  399  kubectl exec -it apache2 bash
+  400  curl 10.106.117.86:8080
+  401  cat services.yml 
+  402  kubectl getnodes
+  403  kubectl get nodes
+  404  cd ..
+  405  cp kubernetes070520 nivruttinath/DevOpsPractice/
+  406  cp -r kubernetes070520 nivruttinath/DevOpsPractice/
+  407  cd nivruttinath/DevOpsPractice/
+  408  ls
+  409  git status
+  410  git add kubernetes070520/
+  411  git commit "New"
+  412  git status
+  413  git add .
+  414  git status
+  415  git commit -m"New"
+  416  git config --global user.email nivruttinath.pethkar@gmail.com
+  417  cd
+  418  kubectl reset
+  419  kubectl --help
+  420  kubeadm reset
+  421  sudo kubeadm reset
+  422  kubectl get nodes
+  423  apt-get update
+  424  sudo apt-get update
+  425  sudo apt-get upgrade kubelet kubeadm
+  426  systemctl restart kubelet
+  427  sudo systemctl restart kubelet
+  428  27430
+  429  sudo systemctl enable kubelet
+  430  sudo systemctl status kubelet
+  431  kubectl get pods
+  432  kubectl version
+  433  kubelet version
+  434  kubectl version
+  435  kubelet version
+  436  kubectl version
+  437  sudo kubeadm init
+  438  mkdir -p $HOME/.kube
+  439  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  440  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  441  kubectl get nodes
+  442  sudo kubectl get nodes
+  443  kubeadm join 172.31.19.188:6443 --token h4ujw3.sljfg5hgb7okc5g9 \
+  444  sudo kubectl get nodes
+  445  sudo kubectl get pods -n kube-system
+  446  sudo  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+  447  sudo kubectl get pods -n kube-system
+  448  kubectl get nodes
+  449  sudo kubectl get nodes
+  450  sudo kubectl get pods -n kube-system
+  451  sudo kubectl get pods
+  452  sudo kubectl get nodes
+  453  sudo kubectl get pods -n kube-system
+  454  sudo kubeadm token create --print-join-command
+  455  kubectl get nodes
+  456  sudo kubectl get nodes
+  457  sudo kubectl get pods -n kube-system
+  458  kubectl get nodes
+  459  sudo kubectl get nodes
+  460  sudo kubectl get pods
+  461  sudo kubectl create deployment my-dep --image=httpd
+  462  sudo kubectl get depoyment
+  463  sudo kubectl get deployment
+  464  sudo kubectl create deployment mydep --image=httpd
+  465  sudo kubectl get deployment
+  466  sudo kubectl delete deployment my-dep
+  467  sudo kubectl get pods
+  468  sudo kubectl delete pods mydep-5dcf7bcbd6-rkwzb
+  469  sudo kubectl get pods
+  470  sudo kubectl edit deployment mydep
+  471  sudo kubectl get pods
+  472  sudo kubectl get services
+  473  sudo kubectl get deployments
+  474  sudo kubectl get deployments -o wide
+  475  sudo kubectl describe deployments
+  476  sudo kubectl describe deployments mydep
+  477  sudo kubectl expose deployment mydep --port=80
+  478  sudo kubectl get services
+  479  sudo kubectl describe services mydep
+  480  curl 10.106.84.148:80
+  481  curl 10.106.84.148
+  482  sudo kubectl get pods
+  483  history >> nivruttinath/DevOpsPractice/kubernetes070520/history_0805

@@ -1,0 +1,8 @@
+kind: Pod 
+apiVersion: v1 
+metadata:
+  name: apache2
+spec:
+  containers:
+    - name: myhttpd
+      image: docker.io/httpd 
