@@ -1,0 +1,116 @@
+  197  kubectl get pods
+  198  vi init_pod.yml
+  199  less services.yml 
+  200  vi init_myservice.yml
+  201  vi init_mydb.yml
+  202  kubectl create -i init_pod.yml 
+  203  kubectl create -f init_pod.yml 
+  204  kubectl get pods
+  205  kubectl logs -f myapp-pod
+  206  kubectl logs  myapp-pod -c init-service -f
+  207  sudo kubectl logs  myapp-pod -c init-service -f
+  208  cat init_
+  209  cat init_pod.yml 
+  210  kubectl logs myapp-pod -c init-service -f 
+  211  kubectl describe myapp-pod
+  212  kubectl describe pod myapp-pod
+  213  kubectl logs myapp-pod -c init-myservice -f 
+  214  kubectl create -f init_myservice.yml 
+  215  kubectl logs myapp-pod -c init-myservice -f 
+  216  kubectl get pods
+  217  kubectl logs myapp-pod -c init-mydb -f 
+  218  kubectl create -f init_mydb.yml 
+  219  kubectl logs myapp-pod -c init-mydb -f 
+  220  kubectl get pods
+  221  vi probes.yml
+  222  cat probes.yml 
+  223  kubectl create -f probes.yml 
+  224  kubectl get pods
+  225  kubectl describe pod liveness-exec
+  226  kubectl get pods
+  227  kubectl describe pod liveness-exec
+  228  kubectl get pods
+  229  kubectl describe pod liveness-exec
+  230  kubectl get pods
+  231  kubectl describe pod liveness-exec
+  232  kubectl get pods -w
+  233  kubectl get pods -o w
+  234  kubectl get pods -o 
+  235  kubectl get pods -o w
+  236  kubectl get pods 
+  237  sudo apt-get install jq
+  238  etcdctl
+  239  sudo etcdctl
+  240  kubectl exec -it -n kube-system etcd-kmaster -- sh -c "ETCDCTL_API=3 etcdctl --endpoints $advertise_url --cacert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/server.key --cert /etc/kubernetes/pki/etcd/server.crt get \"\" --prefix=true -w json" > etcd.json
+  241  sudo kubectl exec -it -n kube-system etcd-kmaster -- sh -c "ETCDCTL_API=3 etcdctl --endpoints $advertise_url --cacert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/server.key --cert /etc/kubernetes/pki/etcd/server.crt get \"\" --prefix=true -w json" > etcd.json
+  242  kubectl get pods -n kube-system
+  243  curl wgetip.com
+  244  advertise_url="13.235.84.166:2379"
+  245  sudo kubectl exec -it -n kube-system etcd-kmaster -- sh -c "ETCDCTL_API=3 etcdctl --endpoints $advertise_url --cacert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/server.key --cert /etc/kubernetes/pki/etcd/server.crt get \"\" --prefix=true -w json" > etcd.json
+  246  echo $advertise_url
+  247  kubectl describe pod etcd-kmaster -n kube-system
+  248  kubectl get pods -o w
+  249  kubectl get pods -o wide
+  250  advertise_url="172.31.19.188:2379"
+  251  echo $advertise_url
+  252  sudo kubectl exec -it -n kube-system etcd-kmaster -- sh -c "ETCDCTL_API=3 etcdctl --endpoints $advertise_url --cacert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/server.key --cert /etc/kubernetes/pki/etcd/server.crt get \"\" --prefix=true -w json" > etcd.json
+  253  ls
+  254  ls -ltr
+  255  rm 1
+  256  ls -ltr
+  257  less etcd.json 
+  258  for k in $(cat etcd.json | jq '.kvs[].key' | cut -d '"' -f2); do echo $k | base64 --decode; echo; done
+  259  for k in $(cat etcd.json | jq '.kvs[].value' | cut -d '"' -f2); do echo $k | base64 --decode; echo; done
+  260  kubectl exec -it -n kube-system etcd-kmaster -- sh -c "ETCDCTL_API=3 etcdctl --endpoints $advertise_url --cacert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/server.key --cert /etc/kubernetes/pki/etcd/server.crt member list"
+  261  kubectl exec -it -n kube-system etcd-kmaster -- sh -c "ETCDCTL_API=3 etcdctl --endpoints $advertise_url --cacert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/server.key --cert /etc/kubernetes/pki/etcd/server.crt snapshot save test1.db"
+  262  ls
+  263  cd ../nivruttinath/DevOpsPractice/kubernetes070520/
+  264  cd -
+  265  ls
+  266  kubectl get pods -o wide
+  267  kubectl get pods -o wide | grep kslave2
+  268  kubectl drain kslave2 
+  269  kubectl drain kslave2 --force --delete-local-data --ignore-daemonsets 
+  270  kubectl get nodes
+  271  kubectl get pods -o wide | grep kslave2
+  272  kubectl get nodes
+  273  kubectl get pods -o wide | grep kslave2
+  274  kubectl get nodes
+  275  kubectl uncordon kslave2
+  276  kubectl get nodes
+  277  kubectl get pods -o wide | grep kslave2
+  278  kubectl get pods -o wide 
+  279  kubectl get deployment -n wordpress -o yaml > backup_mywp.yml
+  280  kubectl get deployment,svc -n wordpress -o yaml > backup_mywp.yml 
+  281  kubectl get all -o yaml > all.yml
+  282  ls -ltr
+  283  mv all.yml backup_all.yml
+  284  ls
+  285  les backup_
+  286  less backup_
+  287  less backup_mywp.yml 
+  288  less backup_
+  289  less backup_all.yml 
+  290  cat backup_mywp.yml 
+  291  kubectl get deployment,svc -n wordpress -o yaml > backup_mywp.yml 
+  292  cat backup_mywp.yml 
+  293  rm backup_mywp.yml 
+  294  kubectl get deployment,svc -n wordpress -o yaml > backup_mywp.yml 
+  295  cat backup_mywp.yml 
+  296  wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+  297  ls -ltr
+  298  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+  299  kubectl get all -n kubernetes-dashboard
+  300  sdo kubectl get all -n kubernetes-dashboard
+  301  sudo kubectl get all -n kubernetes-dashboard
+  302  kubectl get all -n kubernetes-dashboard
+  303  sudo kubectl get all -n kubernetes-dashboard
+  304  kubectl get pods -n kubernetes-dashboard
+  305  kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+  306  kubectl get svc -n kubernetes-dashboard
+  307  kubectl get svc kubernetes-dashboard -n  kubernetes-dashboard 
+  308  curl wgetip.com
+  309  kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep kubernetes-dashboard | awk '{print $1}')
+  310  ls -ltr
+  311  cp init_* probes.yml etcd.json backup_* recommended.yaml ../nivruttinath/DevOpsPractice/kubernetes070520/
+  312  history >> ../nivruttinath/DevOpsPractice/kubernetes070520/history_1405

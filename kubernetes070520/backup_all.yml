@@ -1,0 +1,4733 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-11T11:47:27Z"
+    labels:
+      mycka: simplilearn
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:mycka: {}
+        f:spec:
+          f:containers:
+            k:{"name":"mycontainer"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-11T11:47:27Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.2"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:05:03Z"
+    name: apache1
+    namespace: default
+    resourceVersion: "184879"
+    selfLink: /api/v1/namespaces/default/pods/apache1
+    uid: 4f5363f6-16aa-42c8-ba5a-7c5e784837e3
+  spec:
+    containers:
+    - image: docker.io/httpd
+      imagePullPolicy: Always
+      name: mycontainer
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-11T11:47:27Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:03Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:03Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-11T11:47:27Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://3b4757517b78899a9615a9670f5e8c01da7c8c00f476d61a7f88147438c93fe9
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:f1d23356c95762858854958be00b66c92f7bf35a88b902575a2afd808e1ab29e
+      lastState:
+        terminated:
+          containerID: docker://7ff62f397b4912ee4a16234f83499d71c624a4b96ca794392dc8054850f5433e
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:10Z"
+          reason: Completed
+          startedAt: "2020-05-13T08:03:24Z"
+      name: mycontainer
+      ready: true
+      restartCount: 3
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:05:03Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.2
+    podIPs:
+    - ip: 10.36.0.2
+    qosClass: BestEffort
+    startTime: "2020-05-11T11:47:27Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-12T08:48:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:containers:
+            k:{"name":"cpu-demo-ctr"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-12T08:48:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.6"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:05:09Z"
+    name: cpu-demo
+    namespace: default
+    resourceVersion: "184914"
+    selfLink: /api/v1/namespaces/default/pods/cpu-demo
+    uid: b64df2bc-9c3f-4852-82c2-2f4fc0ab3c81
+  spec:
+    containers:
+    - args:
+      - -cpus
+      - "2"
+      image: vish/stress
+      imagePullPolicy: Always
+      name: cpu-demo-ctr
+      resources:
+        limits:
+          cpu: "1"
+        requests:
+          cpu: 500m
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T08:48:40Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:09Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:09Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T08:48:40Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://68660fd9a0a6ff090fd4746e0c6366ff3039c81b901e91b973a6d176581a8432
+      image: vish/stress:latest
+      imageID: docker-pullable://vish/stress@sha256:b6456a3df6db5e063e1783153627947484a3db387be99e49708c70a9a15e7177
+      lastState:
+        terminated:
+          containerID: docker://32ca07acf8f01fab55397e21f1162b30491e3c2a84df23b0ebe0d9e28d95b258
+          exitCode: 2
+          finishedAt: "2020-05-13T12:52:09Z"
+          reason: Error
+          startedAt: "2020-05-13T08:03:32Z"
+      name: cpu-demo-ctr
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:05:08Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.6
+    podIPs:
+    - ip: 10.36.0.6
+    qosClass: Burstable
+    startTime: "2020-05-12T08:48:40Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-12T08:48:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:containers:
+            k:{"name":"default-mem-demo-2-ctr"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-12T08:48:48Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.3"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:04:50Z"
+    name: default-mem-demo-2
+    namespace: default
+    resourceVersion: "184742"
+    selfLink: /api/v1/namespaces/default/pods/default-mem-demo-2
+    uid: 331120d0-2ffa-4e3d-999f-46ddf3fbdc76
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: default-mem-demo-2-ctr
+      resources:
+        limits:
+          memory: 1Gi
+        requests:
+          memory: 1Gi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T08:48:48Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:50Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:50Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T08:48:48Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://38f0ee10e84b7863aea58b788a91e7fc6679e4db8092fa8f912d71c32f60678f
+      image: nginx:latest
+      imageID: docker-pullable://nginx@sha256:404ed8de56dd47adadadf9e2641b1ba6ad5ce69abf251421f91d7601a2808ebe
+      lastState:
+        terminated:
+          containerID: docker://8d5a3f1d8245bb8d228570845be2e2872c1aef65c573eb20c9a6fc5fc530448c
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:09Z"
+          reason: Completed
+          startedAt: "2020-05-13T08:03:27Z"
+      name: default-mem-demo-2-ctr
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:04:49Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.3
+    podIPs:
+    - ip: 10.36.0.3
+    qosClass: Burstable
+    startTime: "2020-05-12T08:48:48Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-12T10:05:32Z"
+    generateName: frontend-
+    labels:
+      controller-revision-hash: 8449bb6bfc
+      name: frontend-webserver
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:name: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0220cf24-a3de-4a17-9377-cfa53576843a"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution:
+                .: {}
+                f:nodeSelectorTerms: {}
+          f:containers:
+            k:{"name":"webserver"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-12T10:05:32Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.7"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:04:57Z"
+    name: frontend-6hxjf
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: frontend
+      uid: 0220cf24-a3de-4a17-9377-cfa53576843a
+    resourceVersion: "184828"
+    selfLink: /api/v1/namespaces/default/pods/frontend-6hxjf
+    uid: c4999dd8-8355-4a79-a6f0-eb1d55c1b48e
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - kslave1
+    containers:
+    - image: httpd
+      imagePullPolicy: Always
+      name: webserver
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T10:05:32Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:57Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:57Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T10:05:32Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://25d3cece912f2cf8b23ed1c9b0a23ded7cbf1d47ececeddbf4b57b441c48c6d1
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:f1d23356c95762858854958be00b66c92f7bf35a88b902575a2afd808e1ab29e
+      lastState:
+        terminated:
+          containerID: docker://edf92cfa43819d954557cfaa6a793617796a6b41f1ece03bf9baf7566ccd0a91
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:10Z"
+          reason: Completed
+          startedAt: "2020-05-13T08:03:35Z"
+      name: webserver
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:04:57Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.7
+    podIPs:
+    - ip: 10.36.0.7
+    qosClass: BestEffort
+    startTime: "2020-05-12T10:05:32Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-12T10:05:32Z"
+    generateName: frontend-
+    labels:
+      controller-revision-hash: 8449bb6bfc
+      name: frontend-webserver
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:name: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0220cf24-a3de-4a17-9377-cfa53576843a"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution:
+                .: {}
+                f:nodeSelectorTerms: {}
+          f:containers:
+            k:{"name":"webserver"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-12T10:05:32Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.32.0.4"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:04:58Z"
+    name: frontend-97ppf
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: frontend
+      uid: 0220cf24-a3de-4a17-9377-cfa53576843a
+    resourceVersion: "184839"
+    selfLink: /api/v1/namespaces/default/pods/frontend-97ppf
+    uid: 2d7a78fd-4e74-4853-9328-0a5f553c7384
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - kmaster
+    containers:
+    - image: httpd
+      imagePullPolicy: Always
+      name: webserver
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kmaster
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T10:05:32Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:58Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:58Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T10:05:32Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://6cfbfc361217ba45d04cdd4a4a5775297e10d2ee7ae371c21c7532a6ebe58186
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:f1d23356c95762858854958be00b66c92f7bf35a88b902575a2afd808e1ab29e
+      lastState:
+        terminated:
+          containerID: docker://49520a628bd9a8f5e0ad485aa64987679d4289985f2d034aa95d2ba4801277d5
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:09Z"
+          reason: Completed
+          startedAt: "2020-05-13T08:02:43Z"
+      name: webserver
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:04:57Z"
+    hostIP: 172.31.19.188
+    phase: Running
+    podIP: 10.32.0.4
+    podIPs:
+    - ip: 10.32.0.4
+    qosClass: BestEffort
+    startTime: "2020-05-12T10:05:32Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-12T10:05:32Z"
+    generateName: frontend-
+    labels:
+      controller-revision-hash: 8449bb6bfc
+      name: frontend-webserver
+      pod-template-generation: "1"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:name: {}
+            f:pod-template-generation: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0220cf24-a3de-4a17-9377-cfa53576843a"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution:
+                .: {}
+                f:nodeSelectorTerms: {}
+          f:containers:
+            k:{"name":"webserver"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-12T10:05:32Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.44.0.5"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:04:51Z"
+    name: frontend-l5xmv
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: frontend
+      uid: 0220cf24-a3de-4a17-9377-cfa53576843a
+    resourceVersion: "184751"
+    selfLink: /api/v1/namespaces/default/pods/frontend-l5xmv
+    uid: ea1278ab-f564-4788-9423-0a783bb3d7ac
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - kslave2
+    containers:
+    - image: httpd
+      imagePullPolicy: Always
+      name: webserver
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave2
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/disk-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/pid-pressure
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/unschedulable
+      operator: Exists
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T10:05:32Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:51Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:51Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-12T10:05:32Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://5b81e1949ca37593986149bec82262832e119807fd2d571f4d684dedd70ab32d
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:f1d23356c95762858854958be00b66c92f7bf35a88b902575a2afd808e1ab29e
+      lastState:
+        terminated:
+          containerID: docker://eb9e5d4eca4163e457fb0c523f81735777b1254c52b0b210cb0edc040e4d8ae9
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:10Z"
+          reason: Completed
+          startedAt: "2020-05-13T08:02:47Z"
+      name: webserver
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:04:50Z"
+    hostIP: 172.31.32.134
+    phase: Running
+    podIP: 10.44.0.5
+    podIPs:
+    - ip: 10.44.0.5
+    qosClass: BestEffort
+    startTime: "2020-05-12T10:05:32Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-14T09:07:33Z"
+    labels:
+      test: liveness
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:test: {}
+        f:spec:
+          f:containers:
+            k:{"name":"liveness"}:
+              .: {}
+              f:args: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+                f:failureThreshold: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-14T09:07:33Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.9"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T10:50:22Z"
+    name: liveness-exec
+    namespace: default
+    resourceVersion: "209109"
+    selfLink: /api/v1/namespaces/default/pods/liveness-exec
+    uid: 77a80584-f0f4-4514-af4b-08289f93b625
+  spec:
+    containers:
+    - args:
+      - /bin/sh
+      - -c
+      - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+      image: k8s.gcr.io/busybox
+      imagePullPolicy: Always
+      livenessProbe:
+        exec:
+          command:
+          - cat
+          - /tmp/healthy
+        failureThreshold: 3
+        initialDelaySeconds: 5
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: liveness
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T09:07:33Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:50:22Z"
+      message: 'containers with unready status: [liveness]'
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:50:22Z"
+      message: 'containers with unready status: [liveness]'
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T09:07:33Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://c80fefe8103c5d156188c847cb5b0130f295a30a8d11d5678b6a569e59353792
+      image: k8s.gcr.io/busybox:latest
+      imageID: docker-pullable://k8s.gcr.io/busybox@sha256:d8d3bc2c183ed2f9f10e7258f84971202325ee6011ba137112e01e30f206de67
+      lastState:
+        terminated:
+          containerID: docker://c80fefe8103c5d156188c847cb5b0130f295a30a8d11d5678b6a569e59353792
+          exitCode: 137
+          finishedAt: "2020-05-14T10:50:22Z"
+          reason: Error
+          startedAt: "2020-05-14T10:49:08Z"
+      name: liveness
+      ready: false
+      restartCount: 31
+      started: false
+      state:
+        waiting:
+          message: back-off 5m0s restarting failed container=liveness pod=liveness-exec_default(77a80584-f0f4-4514-af4b-08289f93b625)
+          reason: CrashLoopBackOff
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.9
+    podIPs:
+    - ip: 10.36.0.9
+    qosClass: BestEffort
+    startTime: "2020-05-14T09:07:33Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-13T11:31:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:containers:
+            k:{"name":"1st"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/usr/share/nginx/html"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"2nd"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/html"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"html"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T11:31:42Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.5"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:05:18Z"
+    name: mc1
+    namespace: default
+    resourceVersion: "184941"
+    selfLink: /api/v1/namespaces/default/pods/mc1
+    uid: fdbbfc1c-ba3e-421f-a5b3-10cc5b70eeea
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: 1st
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /usr/share/nginx/html
+        name: html
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    - args:
+      - while true; do date >> /html/index.html; sleep 1; done
+      command:
+      - /bin/sh
+      - -c
+      image: debian
+      imagePullPolicy: Always
+      name: 2nd
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /html
+        name: html
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - emptyDir: {}
+      name: html
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-13T11:31:42Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:18Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:18Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-13T11:31:42Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://5dfbf137007fe222cba1a7b3c117f0a966ff771dd9af826334175cfa89061ce8
+      image: nginx:latest
+      imageID: docker-pullable://nginx@sha256:404ed8de56dd47adadadf9e2641b1ba6ad5ce69abf251421f91d7601a2808ebe
+      lastState:
+        terminated:
+          containerID: docker://5f61bd523a576660059d163d90d181591908387de7754b660df4e7bbadba663f
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:09Z"
+          reason: Completed
+          startedAt: "2020-05-13T11:31:51Z"
+      name: 1st
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:05:06Z"
+    - containerID: docker://52d49ecc91feacb7808f85de8981b93127f6cb4d6c25143e9cc23057de4df0f2
+      image: debian:latest
+      imageID: docker-pullable://debian@sha256:5e31e9c8ddccb855e5ce31b659c89075427c9ca7df94002b7107834dc9ee3f8b
+      lastState:
+        terminated:
+          containerID: docker://3a0a58351bd0de88e5e8775095e1ef7460353c4e42e56383e941fd8049138870
+          exitCode: 137
+          finishedAt: "2020-05-13T12:52:19Z"
+          reason: Error
+          startedAt: "2020-05-13T11:32:01Z"
+      name: 2nd
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:05:17Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.5
+    podIPs:
+    - ip: 10.36.0.5
+    qosClass: BestEffort
+    startTime: "2020-05-13T11:31:42Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-14T10:41:24Z"
+    generateName: mydep-558664c4bd-
+    labels:
+      pod-template-hash: 558664c4bd
+      run: mydep
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:pod-template-hash: {}
+            f:run: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b41b6227-7c79-48d1-8325-c9338f31dd8f"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:containers:
+            k:{"name":"mydep"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:24Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.10"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T10:41:26Z"
+    name: mydep-558664c4bd-t954r
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: mydep-558664c4bd
+      uid: b41b6227-7c79-48d1-8325-c9338f31dd8f
+    resourceVersion: "207668"
+    selfLink: /api/v1/namespaces/default/pods/mydep-558664c4bd-t954r
+    uid: e2e31b4c-ba67-4c5b-8d8e-0b09cd2b230d
+  spec:
+    containers:
+    - image: ghost:0.11
+      imagePullPolicy: IfNotPresent
+      name: mydep
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:26Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:26Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://3392451e869105a31a9d0b4d65ce75582d9159991286c0392a581da238416590
+      image: ghost:0.11
+      imageID: docker-pullable://ghost@sha256:d0d98422dba52c2061e643e299eedb79b817fef8e46b88621327d4c33e156770
+      lastState: {}
+      name: mydep
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T10:41:25Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.10
+    podIPs:
+    - ip: 10.36.0.10
+    qosClass: BestEffort
+    startTime: "2020-05-14T10:41:24Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-13T09:32:51Z"
+    generateName: mydep-558664c4bd-
+    labels:
+      pod-template-hash: 558664c4bd
+      run: mydep
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:pod-template-hash: {}
+            f:run: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b41b6227-7c79-48d1-8325-c9338f31dd8f"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:containers:
+            k:{"name":"mydep"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-13T09:32:51Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.4"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:04:53Z"
+    name: mydep-558664c4bd-zxsz4
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: mydep-558664c4bd
+      uid: b41b6227-7c79-48d1-8325-c9338f31dd8f
+    resourceVersion: "184770"
+    selfLink: /api/v1/namespaces/default/pods/mydep-558664c4bd-zxsz4
+    uid: 5998d122-313b-4899-9c7e-d89aebd6b99f
+  spec:
+    containers:
+    - image: ghost:0.11
+      imagePullPolicy: IfNotPresent
+      name: mydep
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-13T09:32:51Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:53Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:53Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-13T09:32:51Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://672de09102bef27b62c2e33e240d1e176b209e5c273420a91426345c43a7860b
+      image: ghost:0.11
+      imageID: docker-pullable://ghost@sha256:d0d98422dba52c2061e643e299eedb79b817fef8e46b88621327d4c33e156770
+      lastState:
+        terminated:
+          containerID: docker://ec5e0bbdc2a6bf01e31f90e55dbe242275e46984d1f5eb2056c77c988a6b5f65
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:09Z"
+          reason: Completed
+          startedAt: "2020-05-13T09:33:23Z"
+      name: mydep
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:04:52Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.4
+    podIPs:
+    - ip: 10.36.0.4
+    qosClass: BestEffort
+    startTime: "2020-05-13T09:32:51Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-14T10:41:24Z"
+    generateName: php-apache-74489d489b-
+    labels:
+      pod-template-hash: 74489d489b
+      run: php-apache
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:pod-template-hash: {}
+            f:run: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"7ee98b3c-4b09-4a27-adb0-fe898058c42d"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:containers:
+            k:{"name":"php-apache"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:24Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.32.0.7"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T10:42:13Z"
+    name: php-apache-74489d489b-d4bmj
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: php-apache-74489d489b
+      uid: 7ee98b3c-4b09-4a27-adb0-fe898058c42d
+    resourceVersion: "207889"
+    selfLink: /api/v1/namespaces/default/pods/php-apache-74489d489b-d4bmj
+    uid: e91008b0-48ba-41aa-a47b-bd4230966c11
+  spec:
+    containers:
+    - image: k8s.gcr.io/hpa-example
+      imagePullPolicy: Always
+      name: php-apache
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 200m
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kmaster
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:42:13Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:42:13Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://3cf76e6e20b4183d1c5b6910df59bb24fb2873ea84144e8de6391ca325de0e39
+      image: k8s.gcr.io/hpa-example:latest
+      imageID: docker-pullable://k8s.gcr.io/hpa-example@sha256:581697a37f0e136db86d6b30392f0db40ce99c8248a7044c770012f4e8491544
+      lastState: {}
+      name: php-apache
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T10:42:12Z"
+    hostIP: 172.31.19.188
+    phase: Running
+    podIP: 10.32.0.7
+    podIPs:
+    - ip: 10.32.0.7
+    qosClass: Burstable
+    startTime: "2020-05-14T10:41:24Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-13T10:56:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:containers:
+            k:{"name":"env-var-configmap"}:
+              .: {}
+              f:env:
+                .: {}
+                k:{"name":"testenv"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef:
+                      .: {}
+                      f:key: {}
+                      f:name: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T10:56:56Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.1"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:04:52Z"
+    name: pod-env12
+    namespace: default
+    resourceVersion: "184764"
+    selfLink: /api/v1/namespaces/default/pods/pod-env12
+    uid: 54336e30-e60e-4389-b4c5-cee8b01ca075
+  spec:
+    containers:
+    - env:
+      - name: testenv
+        valueFrom:
+          configMapKeyRef:
+            key: database
+            name: example-configmap
+      image: nginx:1.7.9
+      imagePullPolicy: IfNotPresent
+      name: env-var-configmap
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-13T10:56:56Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:52Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:04:52Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-13T10:56:56Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://0d6be3e1b7de98dc162fa6ab8eeabdeb48aa42b1d4fabc465232b51fa13c7406
+      image: nginx:1.7.9
+      imageID: docker-pullable://nginx@sha256:e3456c851a152494c3e4ff5fcc26f240206abac0c9d794affb40e0714846c451
+      lastState:
+        terminated:
+          containerID: docker://a90fcfe49acb0d0c5545816a50f2d449df254ea4007a8663ae5db54acdd32d36
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:09Z"
+          reason: Completed
+          startedAt: "2020-05-13T10:56:57Z"
+      name: env-var-configmap
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:04:52Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.1
+    podIPs:
+    - ip: 10.36.0.1
+    qosClass: BestEffort
+    startTime: "2020-05-13T10:56:56Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubernetes.io/config.hash: 1a7342e03db9a3823c6f7f3c7d587038
+      kubernetes.io/config.mirror: 1a7342e03db9a3823c6f7f3c7d587038
+      kubernetes.io/config.seen: "2020-05-12T10:50:53.805827131Z"
+      kubernetes.io/config.source: file
+    creationTimestamp: "2020-05-12T10:50:55Z"
+    labels:
+      mycka: simplilearn
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubernetes.io/config.hash: {}
+            f:kubernetes.io/config.mirror: {}
+            f:kubernetes.io/config.seen: {}
+            f:kubernetes.io/config.source: {}
+          f:labels:
+            .: {}
+            f:mycka: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"44bd99f7-55ef-48a2-b46b-8c42fb0b778d"}:
+              .: {}
+              f:apiVersion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:containers:
+            k:{"name":"mycontainer"}:
+              .: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodScheduled"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.36.0.8"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T08:05:00Z"
+    name: staticpod-kslave1
+    namespace: default
+    ownerReferences:
+    - apiVersion: v1
+      controller: true
+      kind: Node
+      name: kslave1
+      uid: 44bd99f7-55ef-48a2-b46b-8c42fb0b778d
+    resourceVersion: "184856"
+    selfLink: /api/v1/namespaces/default/pods/staticpod-kslave1
+    uid: a8de2428-cbf2-4ae9-bca6-755877da50ba
+  spec:
+    containers:
+    - image: docker.io/httpd
+      imagePullPolicy: Always
+      name: mycontainer
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kslave1
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      operator: Exists
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:03:50Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:00Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:05:00Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T08:03:50Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://6623cf9516862695303e5e93420ad938b47909ab1a7f5c1c018e643d6a934b6b
+      image: httpd:latest
+      imageID: docker-pullable://httpd@sha256:f1d23356c95762858854958be00b66c92f7bf35a88b902575a2afd808e1ab29e
+      lastState:
+        terminated:
+          containerID: docker://c628a189966e39efc9639e17ac2b85d4a0fef48fda99274de3b6dae084903385
+          exitCode: 0
+          finishedAt: "2020-05-13T12:52:10Z"
+          reason: Completed
+          startedAt: "2020-05-13T08:03:41Z"
+      name: mycontainer
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T08:05:00Z"
+    hostIP: 172.31.45.79
+    phase: Running
+    podIP: 10.36.0.8
+    podIPs:
+    - ip: 10.36.0.8
+    qosClass: BestEffort
+    startTime: "2020-05-14T08:03:50Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-14T10:41:24Z"
+    generateName: wordpress-58649fdb87-
+    labels:
+      app: wordpress
+      pod-template-hash: 58649fdb87
+      tier: frontend
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+            f:tier: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"cd838bd2-a04a-485e-9f85-9a75ac2e3643"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:containers:
+            k:{"name":"wordpress"}:
+              .: {}
+              f:env:
+                .: {}
+                k:{"name":"WORDPRESS_DB_HOST"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"WORDPRESS_DB_PASSWORD"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":80,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:24Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.32.0.9"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T10:42:04Z"
+    name: wordpress-58649fdb87-c82d2
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: wordpress-58649fdb87
+      uid: cd838bd2-a04a-485e-9f85-9a75ac2e3643
+    resourceVersion: "207846"
+    selfLink: /api/v1/namespaces/default/pods/wordpress-58649fdb87-c82d2
+    uid: 97d8bf16-e8d6-49cc-8c93-0722b2edd551
+  spec:
+    containers:
+    - env:
+      - name: WORDPRESS_DB_HOST
+        value: wordpress-mysql
+      - name: WORDPRESS_DB_PASSWORD
+        value: centos
+      image: wordpress:4.8-apache
+      imagePullPolicy: IfNotPresent
+      name: wordpress
+      ports:
+      - containerPort: 80
+        name: wordpress
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kmaster
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:42:04Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:42:04Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://3042c71a5deb955961789089f64e0d10eb39abb71558adc9f863e39d8a17ff65
+      image: wordpress:4.8-apache
+      imageID: docker-pullable://wordpress@sha256:6216f64ab88fc51d311e38c7f69ca3f9aaba621492b4f1fa93ddf63093768845
+      lastState: {}
+      name: wordpress
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T10:42:03Z"
+    hostIP: 172.31.19.188
+    phase: Running
+    podIP: 10.32.0.9
+    podIPs:
+    - ip: 10.32.0.9
+    qosClass: BestEffort
+    startTime: "2020-05-14T10:41:24Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2020-05-14T10:41:24Z"
+    generateName: wordpress-mysql-5bf5b47c7f-
+    labels:
+      app: wordpress
+      pod-template-hash: 5bf5b47c7f
+      tier: mysql
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+            f:tier: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"efa15292-a2b0-4db2-b9f8-19a17f026085"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:containers:
+            k:{"name":"mysql"}:
+              .: {}
+              f:env:
+                .: {}
+                k:{"name":"MYSQL_DATABASE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MYSQL_ROOT_PASSWORD"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:secretKeyRef:
+                      .: {}
+                      f:key: {}
+                      f:name: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":3306,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:24Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.32.0.8"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      time: "2020-05-14T10:41:42Z"
+    name: wordpress-mysql-5bf5b47c7f-fq8x4
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: wordpress-mysql-5bf5b47c7f
+      uid: efa15292-a2b0-4db2-b9f8-19a17f026085
+    resourceVersion: "207769"
+    selfLink: /api/v1/namespaces/default/pods/wordpress-mysql-5bf5b47c7f-fq8x4
+    uid: 3c192bbb-9dac-4d79-9837-64926397f8d0
+  spec:
+    containers:
+    - env:
+      - name: MYSQL_ROOT_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: dbpass
+            name: mysecret
+      - name: MYSQL_DATABASE
+        value: cka
+      image: mysql:5.6
+      imagePullPolicy: IfNotPresent
+      name: mysql
+      ports:
+      - containerPort: 3306
+        name: mysql
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-dcgsg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: kmaster
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-dcgsg
+      secret:
+        defaultMode: 420
+        secretName: default-token-dcgsg
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:42Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:42Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2020-05-14T10:41:24Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://e0c62a5db54eb458c7d0011a197e1cacfc47cacc4a3a45965f16df8a8bb24b91
+      image: mysql:5.6
+      imageID: docker-pullable://mysql@sha256:8366c5962d962160f5da37dcd89e2a8e5b879f3843895cbeab2b953f6e2a520d
+      lastState: {}
+      name: mysql
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2020-05-14T10:41:41Z"
+    hostIP: 172.31.19.188
+    phase: Running
+    podIP: 10.32.0.8
+    podIPs:
+    - ip: 10.32.0.8
+    qosClass: BestEffort
+    startTime: "2020-05-14T10:41:24Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-05-12T10:12:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:externalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:name: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-12T10:13:00Z"
+    name: daemonservice
+    namespace: default
+    resourceVersion: "109428"
+    selfLink: /api/v1/namespaces/default/services/daemonservice
+    uid: 7630f5a6-b048-4938-b248-48ff59496abf
+  spec:
+    clusterIP: 10.104.5.3
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 30357
+      port: 8080
+      protocol: TCP
+      targetPort: 80
+    selector:
+      name: frontend-webserver
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-05-08T11:06:23Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:component: {}
+            f:provider: {}
+        f:spec:
+          f:clusterIP: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kube-apiserver
+      operation: Update
+      time: "2020-05-08T11:06:23Z"
+    name: kubernetes
+    namespace: default
+    resourceVersion: "155"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: 0627a3a1-d2d8-4cb9-b3c0-12d9c8fc7588
+  spec:
+    clusterIP: 10.96.0.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-05-14T08:40:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:app: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-14T08:40:42Z"
+    name: mydb
+    namespace: default
+    resourceVersion: "190075"
+    selfLink: /api/v1/namespaces/default/services/mydb
+    uid: eaa70ac6-36ce-4ed5-8e5b-af03e88ecf17
+  spec:
+    clusterIP: 10.107.142.66
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: wordpress
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-05-14T08:40:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:app: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-14T08:40:04Z"
+    name: myservice
+    namespace: default
+    resourceVersion: "189972"
+    selfLink: /api/v1/namespaces/default/services/myservice
+    uid: a30be768-488f-42b0-b24b-a74cb681372b
+  spec:
+    clusterIP: 10.105.12.65
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: wordpress
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-05-13T11:12:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:ports:
+            .: {}
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:run: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T11:12:00Z"
+    name: php-apache
+    namespace: default
+    resourceVersion: "169671"
+    selfLink: /api/v1/namespaces/default/services/php-apache
+    uid: 5cf7f7d6-4dec-4b43-abee-21ef4bd8bb8a
+  spec:
+    clusterIP: 10.107.32.90
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      run: php-apache
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2020-05-13T11:48:09Z"
+    labels:
+      app: wordpress
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:ports:
+            .: {}
+            k:{"port":3306,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector:
+            .: {}
+            f:app: {}
+            f:tier: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T11:48:09Z"
+    name: wordpress-mysql
+    namespace: default
+    resourceVersion: "174978"
+    selfLink: /api/v1/namespaces/default/services/wordpress-mysql
+    uid: 7c53ae47-0605-4bc4-a401-0e0c8e4f2190
+  spec:
+    clusterIP: 10.107.150.98
+    ports:
+    - port: 3306
+      protocol: TCP
+      targetPort: 3306
+    selector:
+      app: wordpress
+      tier: mysql
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: apps/v1
+  kind: DaemonSet
+  metadata:
+    annotations:
+      deprecated.daemonset.template.generation: "1"
+    creationTimestamp: "2020-05-12T10:05:32Z"
+    generation: 1
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deprecated.daemonset.template.generation: {}
+        f:spec:
+          f:revisionHistoryLimit: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:name: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:name: {}
+            f:spec:
+              f:containers:
+                k:{"name":"webserver"}:
+                  .: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":80,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+          f:updateStrategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxUnavailable: {}
+            f:type: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-12T10:05:32Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:currentNumberScheduled: {}
+          f:desiredNumberScheduled: {}
+          f:numberAvailable: {}
+          f:numberMisscheduled: {}
+          f:numberReady: {}
+          f:observedGeneration: {}
+          f:updatedNumberScheduled: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T08:04:58Z"
+    name: frontend
+    namespace: default
+    resourceVersion: "184842"
+    selfLink: /apis/apps/v1/namespaces/default/daemonsets/frontend
+    uid: 0220cf24-a3de-4a17-9377-cfa53576843a
+  spec:
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        name: frontend-webserver
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          name: frontend-webserver
+      spec:
+        containers:
+        - image: httpd
+          imagePullPolicy: Always
+          name: webserver
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+    updateStrategy:
+      rollingUpdate:
+        maxUnavailable: 1
+      type: RollingUpdate
+  status:
+    currentNumberScheduled: 3
+    desiredNumberScheduled: 3
+    numberAvailable: 3
+    numberMisscheduled: 0
+    numberReady: 3
+    observedGeneration: 1
+    updatedNumberScheduled: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "4"
+      kubernetes.io/change-cause: kubectl set image deployment/mydep mydep=ghost:0.11
+        --record=true
+    creationTimestamp: "2020-05-13T09:28:07Z"
+    generation: 5
+    labels:
+      run: mydep
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubernetes.io/change-cause: {}
+          f:labels:
+            .: {}
+            f:run: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:run: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:run: {}
+            f:spec:
+              f:containers:
+                k:{"name":"mydep"}:
+                  .: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T09:32:50Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:26Z"
+    name: mydep
+    namespace: default
+    resourceVersion: "207670"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/mydep
+    uid: 9c225e07-a9e4-4dcb-9298-c2bd4a6cd8e1
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        run: mydep
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          run: mydep
+      spec:
+        containers:
+        - image: ghost:0.11
+          imagePullPolicy: IfNotPresent
+          name: mydep
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    conditions:
+    - lastTransitionTime: "2020-05-13T09:28:07Z"
+      lastUpdateTime: "2020-05-13T09:33:24Z"
+      message: ReplicaSet "mydep-558664c4bd" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2020-05-14T10:41:26Z"
+      lastUpdateTime: "2020-05-14T10:41:26Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 5
+    readyReplicas: 2
+    replicas: 2
+    updatedReplicas: 2
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2020-05-13T11:12:00Z"
+    generation: 1
+    labels:
+      run: php-apache
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:run: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:run: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:run: {}
+            f:spec:
+              f:containers:
+                k:{"name":"php-apache"}:
+                  .: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":80,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T11:12:00Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:42:13Z"
+    name: php-apache
+    namespace: default
+    resourceVersion: "207893"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/php-apache
+    uid: ed2f4858-ec2a-4ae2-b9bd-b4fcd718ccf0
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        run: php-apache
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          run: php-apache
+      spec:
+        containers:
+        - image: k8s.gcr.io/hpa-example
+          imagePullPolicy: Always
+          name: php-apache
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 200m
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2020-05-13T11:12:00Z"
+      lastUpdateTime: "2020-05-13T11:12:03Z"
+      message: ReplicaSet "php-apache-74489d489b" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2020-05-14T10:42:13Z"
+      lastUpdateTime: "2020-05-14T10:42:13Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2020-05-13T09:43:29Z"
+    generation: 1
+    labels:
+      app: wordpress
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:app: {}
+              f:tier: {}
+          f:strategy:
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:tier: {}
+            f:spec:
+              f:containers:
+                k:{"name":"wordpress"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"WORDPRESS_DB_HOST"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"WORDPRESS_DB_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":80,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T09:43:29Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:42:04Z"
+    name: wordpress
+    namespace: default
+    resourceVersion: "207852"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/wordpress
+    uid: a231bdd8-2412-47b5-87cb-d42151cead1d
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: wordpress
+        tier: frontend
+    strategy:
+      type: Recreate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: wordpress
+          tier: frontend
+      spec:
+        containers:
+        - env:
+          - name: WORDPRESS_DB_HOST
+            value: wordpress-mysql
+          - name: WORDPRESS_DB_PASSWORD
+            value: centos
+          image: wordpress:4.8-apache
+          imagePullPolicy: IfNotPresent
+          name: wordpress
+          ports:
+          - containerPort: 80
+            name: wordpress
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2020-05-13T09:43:29Z"
+      lastUpdateTime: "2020-05-13T09:43:44Z"
+      message: ReplicaSet "wordpress-58649fdb87" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2020-05-14T10:42:04Z"
+      lastUpdateTime: "2020-05-14T10:42:04Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2020-05-13T09:44:00Z"
+    generation: 2
+    labels:
+      app: wordpress
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:app: {}
+              f:tier: {}
+          f:strategy:
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:tier: {}
+            f:spec:
+              f:containers:
+                k:{"name":"mysql"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"MYSQL_DATABASE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"MYSQL_ROOT_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef:
+                          .: {}
+                          f:key: {}
+                          f:name: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":3306,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T09:49:42Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:42Z"
+    name: wordpress-mysql
+    namespace: default
+    resourceVersion: "207777"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/wordpress-mysql
+    uid: 6d242f9a-0158-4e84-b42b-98dcbfbbc642
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: wordpress
+        tier: mysql
+    strategy:
+      type: Recreate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: wordpress
+          tier: mysql
+      spec:
+        containers:
+        - env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: dbpass
+                name: mysecret
+          - name: MYSQL_DATABASE
+            value: cka
+          image: mysql:5.6
+          imagePullPolicy: IfNotPresent
+          name: mysql
+          ports:
+          - containerPort: 3306
+            name: mysql
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2020-05-13T09:44:00Z"
+      lastUpdateTime: "2020-05-13T09:49:51Z"
+      message: ReplicaSet "wordpress-mysql-5bf5b47c7f" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2020-05-14T10:41:42Z"
+      lastUpdateTime: "2020-05-14T10:41:42Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "4"
+      deployment.kubernetes.io/revision-history: "2"
+      kubernetes.io/change-cause: kubectl set image deployment/mydep mydep=ghost:0.11
+        --record=true
+    creationTimestamp: "2020-05-13T09:29:08Z"
+    generation: 4
+    labels:
+      pod-template-hash: 558664c4bd
+      run: mydep
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:deployment.kubernetes.io/revision-history: {}
+            f:kubernetes.io/change-cause: {}
+          f:labels:
+            .: {}
+            f:pod-template-hash: {}
+            f:run: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9c225e07-a9e4-4dcb-9298-c2bd4a6cd8e1"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:replicas: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:pod-template-hash: {}
+              f:run: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:pod-template-hash: {}
+                f:run: {}
+            f:spec:
+              f:containers:
+                k:{"name":"mydep"}:
+                  .: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:26Z"
+    name: mydep-558664c4bd
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: mydep
+      uid: 9c225e07-a9e4-4dcb-9298-c2bd4a6cd8e1
+    resourceVersion: "207669"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/mydep-558664c4bd
+    uid: b41b6227-7c79-48d1-8325-c9338f31dd8f
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        pod-template-hash: 558664c4bd
+        run: mydep
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          pod-template-hash: 558664c4bd
+          run: mydep
+      spec:
+        containers:
+        - image: ghost:0.11
+          imagePullPolicy: IfNotPresent
+          name: mydep
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 4
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "3"
+      deployment.kubernetes.io/revision-history: "1"
+      kubernetes.io/change-cause: kubectl run mydep --image=ghost:0.9 --record=true
+        --dry-run=true --output=yaml
+    creationTimestamp: "2020-05-13T09:28:07Z"
+    generation: 6
+    labels:
+      pod-template-hash: 796f687549
+      run: mydep
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:deployment.kubernetes.io/revision-history: {}
+            f:kubernetes.io/change-cause: {}
+          f:labels:
+            .: {}
+            f:pod-template-hash: {}
+            f:run: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9c225e07-a9e4-4dcb-9298-c2bd4a6cd8e1"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:replicas: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:pod-template-hash: {}
+              f:run: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:pod-template-hash: {}
+                f:run: {}
+            f:spec:
+              f:containers:
+                k:{"name":"mydep"}:
+                  .: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+        f:status:
+          f:observedGeneration: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-13T09:33:24Z"
+    name: mydep-796f687549
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: mydep
+      uid: 9c225e07-a9e4-4dcb-9298-c2bd4a6cd8e1
+    resourceVersion: "154963"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/mydep-796f687549
+    uid: 72d0b96f-2efe-4441-b497-f357c5ae0e65
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        pod-template-hash: 796f687549
+        run: mydep
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          pod-template-hash: 796f687549
+          run: mydep
+      spec:
+        containers:
+        - image: ghost:0.9
+          imagePullPolicy: IfNotPresent
+          name: mydep
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 6
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2020-05-13T11:12:00Z"
+    generation: 1
+    labels:
+      pod-template-hash: 74489d489b
+      run: php-apache
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:pod-template-hash: {}
+            f:run: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ed2f4858-ec2a-4ae2-b9bd-b4fcd718ccf0"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:replicas: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:pod-template-hash: {}
+              f:run: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:pod-template-hash: {}
+                f:run: {}
+            f:spec:
+              f:containers:
+                k:{"name":"php-apache"}:
+                  .: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":80,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:42:13Z"
+    name: php-apache-74489d489b
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: php-apache
+      uid: ed2f4858-ec2a-4ae2-b9bd-b4fcd718ccf0
+    resourceVersion: "207891"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/php-apache-74489d489b
+    uid: 7ee98b3c-4b09-4a27-adb0-fe898058c42d
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        pod-template-hash: 74489d489b
+        run: php-apache
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          pod-template-hash: 74489d489b
+          run: php-apache
+      spec:
+        containers:
+        - image: k8s.gcr.io/hpa-example
+          imagePullPolicy: Always
+          name: php-apache
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 200m
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2020-05-13T09:43:29Z"
+    generation: 1
+    labels:
+      app: wordpress
+      pod-template-hash: 58649fdb87
+      tier: frontend
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+            f:tier: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a231bdd8-2412-47b5-87cb-d42151cead1d"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:replicas: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:app: {}
+              f:pod-template-hash: {}
+              f:tier: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+                f:tier: {}
+            f:spec:
+              f:containers:
+                k:{"name":"wordpress"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"WORDPRESS_DB_HOST"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"WORDPRESS_DB_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":80,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:42:04Z"
+    name: wordpress-58649fdb87
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: wordpress
+      uid: a231bdd8-2412-47b5-87cb-d42151cead1d
+    resourceVersion: "207851"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/wordpress-58649fdb87
+    uid: cd838bd2-a04a-485e-9f85-9a75ac2e3643
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: wordpress
+        pod-template-hash: 58649fdb87
+        tier: frontend
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: wordpress
+          pod-template-hash: 58649fdb87
+          tier: frontend
+      spec:
+        containers:
+        - env:
+          - name: WORDPRESS_DB_HOST
+            value: wordpress-mysql
+          - name: WORDPRESS_DB_PASSWORD
+            value: centos
+          image: wordpress:4.8-apache
+          imagePullPolicy: IfNotPresent
+          name: wordpress
+          ports:
+          - containerPort: 80
+            name: wordpress
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2020-05-13T09:49:49Z"
+    generation: 1
+    labels:
+      app: wordpress
+      pod-template-hash: 5bf5b47c7f
+      tier: mysql
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+            f:tier: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6d242f9a-0158-4e84-b42b-98dcbfbbc642"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:replicas: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:app: {}
+              f:pod-template-hash: {}
+              f:tier: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+                f:tier: {}
+            f:spec:
+              f:containers:
+                k:{"name":"mysql"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"MYSQL_DATABASE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"MYSQL_ROOT_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef:
+                          .: {}
+                          f:key: {}
+                          f:name: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":3306,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:41:42Z"
+    name: wordpress-mysql-5bf5b47c7f
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: wordpress-mysql
+      uid: 6d242f9a-0158-4e84-b42b-98dcbfbbc642
+    resourceVersion: "207773"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/wordpress-mysql-5bf5b47c7f
+    uid: efa15292-a2b0-4db2-b9f8-19a17f026085
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: wordpress
+        pod-template-hash: 5bf5b47c7f
+        tier: mysql
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: wordpress
+          pod-template-hash: 5bf5b47c7f
+          tier: mysql
+      spec:
+        containers:
+        - env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: dbpass
+                name: mysecret
+          - name: MYSQL_DATABASE
+            value: cka
+          image: mysql:5.6
+          imagePullPolicy: IfNotPresent
+          name: mysql
+          ports:
+          - containerPort: 3306
+            name: mysql
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "1"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2020-05-13T09:44:00Z"
+    generation: 2
+    labels:
+      app: wordpress
+      pod-template-hash: 645d7cc95f
+      tier: mysql
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+            f:tier: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6d242f9a-0158-4e84-b42b-98dcbfbbc642"}:
+              .: {}
+              f:apiVersion: {}
+              f:blockOwnerDeletion: {}
+              f:controller: {}
+              f:kind: {}
+              f:name: {}
+              f:uid: {}
+        f:spec:
+          f:replicas: {}
+          f:selector:
+            f:matchLabels:
+              .: {}
+              f:app: {}
+              f:pod-template-hash: {}
+              f:tier: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+                f:tier: {}
+            f:spec:
+              f:containers:
+                k:{"name":"mysql"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"MYSQL_DATABASE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"MYSQL_ROOT_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":3306,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+        f:status:
+          f:observedGeneration: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-13T09:49:42Z"
+    name: wordpress-mysql-645d7cc95f
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: wordpress-mysql
+      uid: 6d242f9a-0158-4e84-b42b-98dcbfbbc642
+    resourceVersion: "157545"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/wordpress-mysql-645d7cc95f
+    uid: d8d48865-7410-4dbc-8827-172550734489
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: wordpress
+        pod-template-hash: 645d7cc95f
+        tier: mysql
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: wordpress
+          pod-template-hash: 645d7cc95f
+          tier: mysql
+      spec:
+        containers:
+        - env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: centos
+          - name: MYSQL_DATABASE
+            value: cka
+          image: mysql:5.6
+          imagePullPolicy: IfNotPresent
+          name: mysql
+          ports:
+          - containerPort: 3306
+            name: mysql
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2020-05-13T11:12:07Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2020-05-14T10:44:00Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"True","lastTransitionTime":"2020-05-14T08:09:42Z","reason":"TooFewReplicas","message":"the
+        desired replica count is less than the minimum replica count"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":"Resource","resource":{"name":"cpu","currentAverageUtilization":0,"currentAverageValue":"1m"}}]'
+    creationTimestamp: "2020-05-12T11:54:38Z"
+    managedFields:
+    - apiVersion: autoscaling/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:maxReplicas: {}
+          f:minReplicas: {}
+          f:scaleTargetRef:
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+          f:targetCPUUtilizationPercentage: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-12T11:54:38Z"
+    - apiVersion: autoscaling/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:autoscaling.alpha.kubernetes.io/conditions: {}
+            f:autoscaling.alpha.kubernetes.io/current-metrics: {}
+        f:status:
+          f:currentCPUUtilizationPercentage: {}
+          f:currentReplicas: {}
+          f:desiredReplicas: {}
+          f:lastScaleTime: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:44:00Z"
+    name: php-apache
+    namespace: default
+    resourceVersion: "208186"
+    selfLink: /apis/autoscaling/v1/namespaces/default/horizontalpodautoscalers/php-apache
+    uid: 64614295-9960-42dd-b8da-ff0fbb17aa9e
+  spec:
+    maxReplicas: 10
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: php-apache
+    targetCPUUtilizationPercentage: 50
+  status:
+    currentCPUUtilizationPercentage: 0
+    currentReplicas: 1
+    desiredReplicas: 1
+    lastScaleTime: "2020-05-12T12:12:34Z"
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2020-05-13T11:14:16Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2020-05-14T10:42:59Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from memory resource"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2020-05-13T11:14:16Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":"Resource","resource":{"name":"memory","currentAverageValue":"10829824"}},{"type":"Resource","resource":{"name":"cpu","currentAverageUtilization":0,"currentAverageValue":"1m"}}]'
+      autoscaling.alpha.kubernetes.io/metrics: '[{"type":"Resource","resource":{"name":"memory","targetAverageValue":"1000Mi"}}]'
+    creationTimestamp: "2020-05-13T11:14:01Z"
+    managedFields:
+    - apiVersion: autoscaling/v2beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:maxReplicas: {}
+          f:metrics: {}
+          f:minReplicas: {}
+          f:scaleTargetRef:
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+      manager: kubectl
+      operation: Update
+      time: "2020-05-13T11:14:01Z"
+    - apiVersion: autoscaling/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:autoscaling.alpha.kubernetes.io/conditions: {}
+            f:autoscaling.alpha.kubernetes.io/current-metrics: {}
+        f:status:
+          f:currentCPUUtilizationPercentage: {}
+          f:currentReplicas: {}
+          f:desiredReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2020-05-14T10:44:00Z"
+    name: wildfly-example
+    namespace: default
+    resourceVersion: "208187"
+    selfLink: /apis/autoscaling/v1/namespaces/default/horizontalpodautoscalers/wildfly-example
+    uid: a7bf2737-b3ac-446e-bf72-887eb4685935
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: php-apache
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentCPUUtilizationPercentage: 0
+    currentReplicas: 1
+    desiredReplicas: 1
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
